@@ -37,8 +37,8 @@ class UsersController < ApplicationController
     @user.last_name             = params[:last_name] || @user.last_name
     @user.email                 = params[:email] || @user.email
     @user.username              = params[:username] || @user.username
-    @user.password              = params[:password] || @user.password
-    @user.password_confirmation = params[:password_confirmation] || @user.password_confirmation
+    @user.password              = params[:password] || @user.password  #separate this to a new route
+    @user.password_confirmation = params[:password_confirmation] || @user.password_confirmation # separate this to a new route
     @user.prof_image            = params[:prof_image] || @user.prof_image
     @user.about_me              = params[:about_me] || @user.about_me
 
