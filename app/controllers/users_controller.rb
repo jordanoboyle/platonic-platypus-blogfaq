@@ -23,7 +23,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    render json: {message: "Hello there!"}
+    @user = User.find_by(id: 3)
+    render template: "users/show"
   end
 
   def update
