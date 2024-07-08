@@ -21,7 +21,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "first_name", "last_name", "email", "username", "admin", "prof_image", "about_me", "created_at", "updated_at"], data.keys
+    assert_equal ["id", "first_name", "last_name", "email", "username", "password_digest", "admin", "prof_image", "about_me", "created_at", "updated_at"], data.keys
   end
 
   # test "the truth" do

@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   post "/users"   => "users#create" #new sign in only
   patch "/users/:id" => "users#update"  # user only
   delete "/users/:id" => "users#destroy"  # user/admin only
+
+  #sessions Routes
+  post "/sessions" => "sessions#create"
 end

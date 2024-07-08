@@ -6,6 +6,7 @@ json.first_name  user.first_name
 json.last_name  user.last_name
 json.email  user.email
 json.username  user.username
+json.password_digest user.password_digest
 json.admin  user.admin
 json.prof_image  user.prof_image
 json.about_me  user.about_me
