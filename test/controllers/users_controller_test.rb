@@ -8,6 +8,14 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "index" do
+    get "/users.json"
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal User.count, data.length
+  end
+
   # test "the truth" do
   #   assert true
   # end

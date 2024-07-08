@@ -18,7 +18,8 @@ class UsersController < ApplicationController
   end
 
   def index
-    render json: {message: "Hello there!"}
+    @users = User.all
+    render template: "users/index"
   end
 
   def show
