@@ -3,12 +3,12 @@ class UsersController < ApplicationController
 
   def create
     @user                       = User.new()
-    @user.first_name            = "Jimmy"
-    @user.last_name             = "Neutron"
-    @user.email                 = "jimmy@email.com"
-    @user.username              = "jimmy2011"
-    @user.password              = "password"
-    @user.password_confirmation = "password"
+    @user.first_name            = params[:first_name]
+    @user.last_name             = params[:last_name]
+    @user.email                 = params[:email]
+    @user.username              = params[:username]
+    @user.password              = params[:password]
+    @user.password_confirmation = params[:password_confirmation]
 
     if @user.save
       render json: { message: "User created successfully" }, status: :created
