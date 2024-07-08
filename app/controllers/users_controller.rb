@@ -28,7 +28,21 @@ class UsersController < ApplicationController
   end
 
   def update
-    render json: {message: "Hello there!"}
+    @user                       = User.find_by(id: 6)
+    @user.first_name  = "Jimmy Name Change"
+    # @user.last_name  =
+    # @user.email  =
+    # @user.username  =
+    # @user.password  =
+    # @user.password_confirmation  =
+    # @user.prof_image = 
+    # @user.about_me = 
+
+    if @user.save
+      render template: "users/show"
+    else
+      render json: { ERRORs: @user.errors.full_messages}
+    end
   end
 
   def destroy
