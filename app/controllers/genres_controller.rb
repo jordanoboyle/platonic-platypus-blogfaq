@@ -11,6 +11,10 @@ class GenresController < ApplicationController
   end
 
   def create
-    render json: {message: "hello there"}
+    @genre = Genre.create(
+      name: "Test Genre Name",
+      description: "This is a test description",
+      example: "Mario Clone"
+    )
   end
 end
