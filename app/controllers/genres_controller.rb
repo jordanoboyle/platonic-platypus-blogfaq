@@ -2,11 +2,12 @@ class GenresController < ApplicationController
 
   def index
     @genres = Genre.all
-    
+    render template: "genres/index"
   end
 
   def show
-    render json: {message: "hello there"}
+    @genre = Genre.find_by(id: params[:id])
+    render template: "genres/show"
   end
 
   def create
