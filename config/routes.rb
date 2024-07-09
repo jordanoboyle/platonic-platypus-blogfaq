@@ -21,5 +21,12 @@ Rails.application.routes.draw do
   #Genres Routes
   get "/genres"  => "genres#index"
   get "/genres/:id"  => "genres#show"
-  post "/genres", controller: "genres", action: "create" 
+  post "/genres", controller: "genres", action: "create"
+  
+  #Posts Routes
+  get "/posts"  => "genres#index"
+  get "/posts/:id" => "genres#show"
+  post "/posts"   => "posts#create"
+  patch "/posts/:id" => "posts#update"
+  delete  "/posts/:id"  =>  "posts#destroy"
 end
