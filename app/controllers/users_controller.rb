@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  # before_action :authenticate_admin, only: [:index]
+  # before_action :authenticate_user, only: [:show, :update, :destroy]
 
 
   def create
@@ -27,9 +29,7 @@ class UsersController < ApplicationController
     render template: "users/show"
   end
   
-  def destroy
-    render json: {message: "Hello there!"}
-  end
+  
 
   def update
     @user                       = User.find_by(id: params[:id])
@@ -48,6 +48,17 @@ class UsersController < ApplicationController
       render json: { ERRORs: @user.errors.full_messages}
     end
   end
+
+  def destroy
+    @user = User.find_by(id: params[:id])
+
+    if @user.destroy
+      render json: {message: "Account has been removed"}
+    else
+      render json: {ERRORS: user.errors.full_messages}
+    end
+  end
+  
   # def update
   #   @user = User.find(params[:id])
   #   if @user.update_with_password(user_update_params)

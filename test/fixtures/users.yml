@@ -6,7 +6,7 @@ one:
   email: MyString
   username: MyString
   password_digest: MyString
-  admin: false
+  admin: true
   prof_image: MyString
   about_me: MyString
 
@@ -16,6 +16,6 @@ two:
   email: MyString
   username: MyString
   password_digest: MyString
-  admin: false
+  admin: true
   prof_image: MyString
   about_me: MyString
