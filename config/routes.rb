@@ -17,4 +17,9 @@ Rails.application.routes.draw do
 
   #sessions Routes
   post "/sessions" => "sessions#create"
+
+  #Genres Routes
+  get "/genres"  => "genres#index"
+  get "/genres/:id"  => "genres#show"
+  post "/genres", controller: "genres", action: "create" 
 end
