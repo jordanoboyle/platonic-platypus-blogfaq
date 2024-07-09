@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 
-  decription: MyString
+  name: test name 
+  description: MyString
   example: MyString
 
 two:
-  type: 
-  decription: MyString
+  name: test name 
+  description: MyString
   example: MyString
